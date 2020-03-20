@@ -61,7 +61,19 @@ Expected OUTPUT for this sample:
 
  */
 
+
 function getMoviesFreshness(movies) {
+    // let m = []
+    for (let i = 0; i < movies.length; i++) {
+        if (movies[i]["rating"] < 60) {
+            movies[i]["label"] = "rotten"
+        } else if (movies[i]["rating"] >= 60 && movies[i]["rating"] <= 75) {
+            movies[i]["label"] = "fresh"
+        } else {
+            movies[i]["label"] = "certified fresh"
+        }
+    }
+    return movies
 }
 
 

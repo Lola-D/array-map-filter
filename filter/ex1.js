@@ -14,6 +14,13 @@ Expected OUTPUT for this sample:
 */
 
 function getPositiveNumbers(numbers) {
+    let pos = []
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] >= 0) {
+            pos.push(numbers[i])
+        }
+    }
+    return pos
 }
 
 // If you need, you can always visualize the result with a console.log.
