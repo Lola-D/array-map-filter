@@ -63,16 +63,15 @@ Expected OUTPUT for this sample:
 
 
 function getMoviesFreshness(movies) {
-    // let m = []
-    for (let i = 0; i < movies.length; i++) {
-        if (movies[i]["rating"] < 60) {
-            movies[i]["label"] = "rotten"
-        } else if (movies[i]["rating"] >= 60 && movies[i]["rating"] <= 75) {
-            movies[i]["label"] = "fresh"
+    let m = movies.map(movie => {
+        if (movie["rating"] < 60) {
+            movie["label"] = "rotten"
+        } else if (movie["rating"] >= 60 && movie["rating"] <= 75) {
+            movie["label"] = "fresh"
         } else {
-            movies[i]["label"] = "certified fresh"
+            movie["label"] = "certified fresh"
         }
-    }
+    })
     return movies
 }
 

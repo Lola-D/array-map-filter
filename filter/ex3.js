@@ -33,13 +33,8 @@ Expected OUTPUT for these sample arguments:
 */
 
 function filterOnPrice(products, maxPrice) {
-    let ok = []
-    for (let i = 0; i < products.length; i++) {
-        if (products[i].price <= maxPrice) {
-            ok.push(products[i])
-        }
-    }
-    return ok
+    let available = products.filter(product => product.price <= maxPrice)
+    return available
 }
 
 // DON'T TOUCH THIS!

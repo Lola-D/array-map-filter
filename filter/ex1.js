@@ -14,12 +14,7 @@ Expected OUTPUT for this sample:
 */
 
 function getPositiveNumbers(numbers) {
-    let pos = []
-    for (let i = 0; i < numbers.length; i++) {
-        if (numbers[i] >= 0) {
-            pos.push(numbers[i])
-        }
-    }
+    let pos = numbers.filter(number => number >= 0)
     return pos
 }
 

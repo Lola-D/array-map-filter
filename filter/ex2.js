@@ -26,13 +26,7 @@ Expected OUTPUT for this sample:
 */
 
 function keepStarks(names) {
-    let starks = []
-
-    for (let i = 0; i < names.length; i++) {
-        if (names[i].includes('Stark')) {
-            starks.push(names[i])
-        }
-    }
+    let starks = names.filter(name => name.includes('Stark'))
     return starks
 }
 

@@ -44,13 +44,7 @@ Expected OUTPUT for this sample
 
 function getFoodCategories(foods) {
     let s = []
-    foods.forEach(food => {
-        if (food.isVegetarian === true) {
-            s.push(food.food + ' is suitable for vegetarians')
-        } else {
-            s.push(food.food + ' is not suitable for vegetarians')
-        }
-    })
+    let f = foods.map(food => { food.isVegetarian ? s.push(food.food + ' is suitable for vegetarians') : s.push(food.food + ' is not suitable for vegetarians') })
     return s
 }
 

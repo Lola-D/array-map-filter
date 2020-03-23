@@ -27,10 +27,7 @@ Expected OUTPUT for this sample array:
 */
 
 function getStringsLength(strings) {
-    let s = []
-    for (let i = 0; i < strings.length; i++) {
-        s.push(strings[i] + ' contains ' + strings[i].length + ' characters')
-    }
+    let s = strings.map(string => string + ' contains ' + string.length + ' characters')
     return s
 }
 
